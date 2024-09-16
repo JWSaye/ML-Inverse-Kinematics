@@ -21,7 +21,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM, Dropout
 from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import EarlyStopping
-from keras.models import load_model
+#from keras.models import load_model
 
 # loading the data sets
 
@@ -174,7 +174,7 @@ else:
         #           cross-validation
     
     
-    kfold = KFold(5, True, 1)
+    kfold = KFold(n_splits=5, shuffle=True, random_state=1)
     count = 0
     accuracies = []
         

@@ -53,26 +53,27 @@ y_train = pd.DataFrame(y_train); y_test = pd.DataFrame(y_test)
 # training the model
 
 from sklearn.ensemble import GradientBoostingRegressor as gbr
-gbr = gbr(loss='ls', learning_rate=0.1, n_estimators = 800)    
+gbr = gbr(loss='squared_error', learning_rate=0.1, n_estimators = 800)    
 
+print("Starting training...")
 gbr.fit(X_train, y_train[0])
 y_pred1 = np.reshape(gbr.predict(X_test),(X_test.shape[0],1))
-
+print("1/6")
 gbr.fit(X_train, y_train[1])
 y_pred2 = np.reshape(gbr.predict(X_test),(X_test.shape[0],1))
-
+print("2/6")
 gbr.fit(X_train, y_train[2])
 y_pred3 = np.reshape(gbr.predict(X_test),(X_test.shape[0],1))
-
+print("3/6")
 gbr.fit(X_train, y_train[3])
 y_pred4 = np.reshape(gbr.predict(X_test),(X_test.shape[0],1))
-
+print("4/6")
 gbr.fit(X_train, y_train[4])
 y_pred5 = np.reshape(gbr.predict(X_test),(X_test.shape[0],1))
-
+print("5/6")
 gbr.fit(X_train, y_train[5])
 y_pred6 = np.reshape(gbr.predict(X_test),(X_test.shape[0],1))
-
+print("6/6")
 y_pred = np.concatenate((y_pred1, y_pred2, y_pred3, y_pred4, y_pred5, y_pred6), axis = 1)
 #y_pred = np.concatenate((y_pred1, y_pred2, y_pred3), axis = 1)
 
