@@ -12,6 +12,11 @@ The use of machine learning-based techniques in robotic arm kinematics can enabl
 
 ▸ This work is done as a project for my bachelor's degree. June 2019.
 
+## Getting an environment working
+Ensure that you have Anaconda installed (either full or miniconda installation). Once this is installed, start the "Anaconda Prompt" from your Start Menu. Navigate to the folder that this Git Repo is contained in. Finally, to create the environment, use the command
+
+	conda env create -f env_inverse_kinematics.yml
+
 ## Scripts explanation
 
 ### “Gradient_Boosting_Regressor.py” 

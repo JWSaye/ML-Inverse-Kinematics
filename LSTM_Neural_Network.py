@@ -17,10 +17,10 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import KFold
 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, LSTM, Dropout
-from tensorflow.keras.models import load_model
-from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import Dense, LSTM, Dropout # type: ignore
+from tensorflow.keras.models import load_model # type: ignore
+from tensorflow.keras.callbacks import EarlyStopping # type: ignore
 #from keras.models import load_model
 
 # loading the data sets
