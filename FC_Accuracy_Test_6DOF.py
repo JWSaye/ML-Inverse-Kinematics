@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from math import sqrt
-import open3d as o3d
+# import open3d as o3d
 import math
 from mpl_toolkits.mplot3d import Axes3D
 import time

@@ -222,8 +222,8 @@ else:
     test_loss = m.history['val_loss']
     
     # Get training and test accuracy histories
-    training_acc = m.history['accuracy']
-    test_acc = m.history['val_accuracy']
+    training_acc = m.history['acc']
+    test_acc = m.history['val_acc']
     
     # Create count of the number of epochs
     epoch_count = range(1, len(training_loss) + 1)

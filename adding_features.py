@@ -11,7 +11,7 @@ import pandas as pd
 import numpy as np
 from math import  atan2, sin, cos, sqrt
 
-df = pd.read_csv(r'.\dataset_3DOF\dataset_with_constraints_no6_3WRIST_15K.csv',  encoding = 'utf8')
+df = pd.read_csv(r'.\datasets_3DOF\dataset_with_constraints_no6_3WRIST_15K.csv',  encoding = 'utf8')
 df = df.drop(['Unnamed: 0'], axis = 1)
 
 fa_list = []

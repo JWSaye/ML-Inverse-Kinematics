@@ -25,5 +25,5 @@ xyz = df.iloc[:,0:3]
 # Plotting the points
 fig = plt.figure()
 ax = plt.axes(projection='3d')
-ax.scatter3D(xyz.iloc[:,0]*10, xyz.iloc[:,1], xyz.iloc[:,2], c=xyz.iloc[:,2]);
-
+ax.scatter3D(xyz.iloc[:,0]*10, xyz.iloc[:,1], xyz.iloc[:,2], c=xyz.iloc[:,2])
+plt.show()

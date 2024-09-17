@@ -226,14 +226,13 @@ else:
         
         #           LSTM end
         
-        
         # Get training and test loss histories
         training_loss = model_f.history['loss']
         test_loss = model_f.history['val_loss']
         
         # Get training and test accuracy histories
-        training_acc = model_f.history['accuracy']
-        test_acc = model_f.history['val_accuracy']
+        training_acc = model_f.history['acc']
+        test_acc = model_f.history['val_acc']
         
         # Create count of the number of epochs
         epoch_count = range(1, len(training_loss) + 1)
