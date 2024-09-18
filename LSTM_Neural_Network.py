@@ -33,7 +33,7 @@ from tensorflow.keras.callbacks import EarlyStopping # type: ignore
 
 ###          6DOF (dataset with constraints no 6/7)
 
-df = pd.read_csv(r'.\datasets_6DOF\dataset_myplace_with_constraints_no6_merged_plus3.csv',  encoding = 'utf8')
+df = pd.read_csv(r'.\datasets_6DOF\d6DOF.csv',  encoding = 'utf8')
 # MAE [1.327897870427836, 0.6940683958030475, 0.9348772063292176, 1.1812736815637395, 1.1281554071974593, 22.541354624604665]
 # cross_val [0.8796283584810153, 0.5836110064051009, 0.5461870389664586, 0.9794998462462202, 0.5772626092840545, 22.193187113077187]
 

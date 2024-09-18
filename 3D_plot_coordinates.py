@@ -12,7 +12,7 @@ import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
 
 # Reading the data set
-df = pd.read_csv(r'.\datasets_6DOF\dataset_myplace_with_constraints_no6_merged_plus3.csv',  encoding = 'utf8')
+df = pd.read_csv(r'.\datasets_6DOF\d6DOF.csv',  encoding = 'utf8')
 
 # Setting number of points for vizualization
 number_points = 1000

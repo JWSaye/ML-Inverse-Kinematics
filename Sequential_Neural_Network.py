@@ -30,7 +30,7 @@ from keras.callbacks import EarlyStopping
 
 ###          6DOF
 
-df = pd.read_csv(r'.\datasets_6DOF\dataset_myplace_with_constraints_no6_merged_plus3.csv',  encoding = 'utf8')
+df = pd.read_csv(r'.\datasets_6DOF\d6DOF.csv',  encoding = 'utf8')
 #   MAE [1.5180150620045452, 1.0686760142594887, 1.4876093738307, 1.636541801932513, 1.4278333895332755, 22.798384573224745]
 #   cross_val[1.5129320383351554, 0.9476663252798746, 1.0964469020573984, 1.5888469189977055, 1.0088474341799742, 21.822538931056535]
 

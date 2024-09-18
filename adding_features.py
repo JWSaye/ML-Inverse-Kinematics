@@ -10,8 +10,12 @@ Created on Wed Jul 31 23:35:01 2019
 import pandas as pd
 import numpy as np
 from math import  atan2, sin, cos, sqrt
+import time
 
-df = pd.read_csv(r'.\datasets_3DOF\dataset_with_constraints_no6_3WRIST_15K.csv',  encoding = 'utf8')
+# Optimization starts here
+st = time.time()
+
+df = pd.read_csv(r'.\datasets_6DOF\d6DOF.csv',  encoding = 'utf8')
 df = df.drop(['Unnamed: 0'], axis = 1)
 
 fa_list = []
@@ -40,4 +44,7 @@ df_pom1 = df.iloc[:,:3]
 df_pom2 = df.iloc[:,3:]
 df_pom1.insert(3, '3', r_list); df_pom1.insert(4, '4', fn_list); df_pom1.insert(5, '5', fo_list); df_pom1.insert(6, '6',fa_list);   
 df = pd.DataFrame(np.concatenate((df_pom1,df_pom2), axis =1 ))
-# df.to_csv(r'.\dataset_3DOF\dataset_with_constraints_no6_3WRIST_added_RPY_15K.csv')
+df.to_csv(r'.\datasets_6DOF\d6DOF.csv')
+
+en = time.time()
+print(f"Time needed: {en-st} seconds")

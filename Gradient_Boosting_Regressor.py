@@ -23,7 +23,7 @@ from sklearn.ensemble import GradientBoostingRegressor as gbr
 
 ###         6DOF (dataset with constraints no 6/7)
 
-df = pd.read_csv(r'.\datasets_6DOF\dataset_myplace_with_constraints_no6_merged_plus3.csv',  encoding = 'utf8')
+df = pd.read_csv(r'.\datasets_6DOF\d6DOF.csv',  encoding = 'utf8')
 # MAE [3.819868259782215, 1.871342541554445, 2.08383743340577, 5.863820251341452, 3.7049899703536595, 22.548858767211478]              cross_val [0.10860406592656537, 0.11720947321502871, 0.1094927504079676, 0.12328082332514634, 0.05459377018100175, 0.16212063413281178]
 
 df = df.drop(['Unnamed: 0'], axis = 1)
@@ -53,7 +53,7 @@ y_train = pd.DataFrame(y_train); y_test = pd.DataFrame(y_test)
 # training the model
 
 from sklearn.ensemble import GradientBoostingRegressor as gbr
-gbr = gbr(loss='squared_error', learning_rate=0.1, n_estimators = 800)    
+gbr = gbr(loss='huber', learning_rate=0.1, n_estimators = 800)    
 
 print("Starting training...")
 gbr.fit(X_train, y_train[0])
